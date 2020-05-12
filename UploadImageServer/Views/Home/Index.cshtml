@@ -1,0 +1,34 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>Hariti Study Hub</h1>
+    <h4>How to Upload and Save Image in Asp.Net MVC</h4>
+    <div>
+        <form action="/Home/Index" method="post" enctype="multipart/form-data">
+            <table border="1" width="500" height="150" bgcolor="yellow">
+                <tr>
+                    <td>Choose Image to Upload</td>
+                    <td><input type="file" name="file1" /></td>
+                </tr>
+                <tr>
+
+                    <td colspan="2">
+                        <input type="submit" name="cbutton" value="Start Upload" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <font color="GREEN">@ViewBag.uploadresult</font>
+    </div>
+</body>
+</html>
+

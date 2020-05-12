@@ -1,0 +1,35 @@
+﻿@using DisplayData.Models;
+<html>
+<head>
+    <title>Display Data Using MVC</title>
+</head>
+<body>
+    <h3>Display Data Using Model,View, Controller and ViewData Using Asp.Net MVC</h3>
+    <h4>Student Information</h4>
+    @{
+        var student1 = (StudentData)ViewData["StudentInfo"];
+    }
+    <table border="1">
+        <tr>
+            <td>Roll Number</td>
+            <td>@student1.rollno</td>
+        </tr>
+
+        <tr>
+            <td>Student Name</td>
+            <td>@student1.sname</td>
+        </tr>
+
+        <tr>
+            <td>Father Name</td>
+            <td>@student1.fname</td>
+        </tr>
+
+        <tr>
+            <td>Mother Name</td>
+            <td>@student1.mname</td>
+        </tr>
+
+    </table>
+</body>
+</html>

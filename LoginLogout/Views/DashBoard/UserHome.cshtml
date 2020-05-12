@@ -1,0 +1,19 @@
+﻿
+<h3><font color="RED">Login and Logout Facility Using Session in Asp.Net MVC</font></h3>
+<div>
+    Hello @Session["username"].ToString()
+    <br />
+
+    <table>
+
+        <tr>
+            <td>
+                Welcome to Our Website, You can explore 400 Video tutorials for learn Asp.Net With C#
+            </td>
+        </tr>
+    </table>
+    <form action="/DashBoard/UserHome" method="post">
+        <input type="submit" value="Logout" name="cbutton" />
+    </form>
+
+</div>

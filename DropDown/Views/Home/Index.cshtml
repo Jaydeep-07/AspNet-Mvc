@@ -1,0 +1,46 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h3><font color="RED">How to Use DropDownList in Asp.Net MVC</font></h3>
+    <div>
+        <form action="/Home/Index" method="post">
+            <table border="1" bgcolor="YELLOW" height="150" width="300">
+                <tr>
+                    <td>Select Your Profession</td>
+                    <td>
+                        @Html.DropDownList("profession", new List<SelectListItem>
+                            {
+                               new SelectListItem{ Text="Photographer", Value = "Photographer" },
+                               new SelectListItem{ Text="Web Developer", Value = "Web Developer" },
+                               new SelectListItem{ Text="Software Engineer", Value = "Software Engineer" },
+                               new SelectListItem{ Text="Programmer", Value = "Programmer" },
+                               new SelectListItem{ Text="Doctor", Value = "Doctor" },
+                            })
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td colspan="2" align="center"><input type="submit" value="Submit" /></td>
+                </tr>
+
+            </table>
+            <br />
+            <br />
+            <b>@ViewBag.dropdowndata</b>
+
+        </form>
+    </div>
+
+</body>
+</html>

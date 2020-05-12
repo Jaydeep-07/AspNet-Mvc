@@ -1,0 +1,37 @@
+﻿@{
+    Layout = null;
+}
+@model LargestNo.Models.LargerData
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h4>Find Largest Number Out of Two Numbers Using Asp.Net MVC</h4>
+        <form action="\LargestNumber\Index" method="post">
+            <table border="1">
+                <tr>
+                    <td>First Number</td>
+                    <td><input type="text" name="a" /></td>
+                </tr>
+                <tr>
+                    <td>Second Number</td>
+                    <td><input type="text" name="b" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><input type="submit" value="Find Largest" /></td>
+                </tr>
+            </table>
+            <br />
+            @Model.result
+
+
+
+        </form>
+    </div>
+</body>
+</html>

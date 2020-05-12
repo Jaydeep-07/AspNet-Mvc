@@ -1,0 +1,60 @@
+﻿
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/jquery/jquery-3.2.1.min.js"></script>
+    <script>
+    $(document).ready(function () {
+
+
+    $("#button1").click(function () {
+    var num1=$("#txt1").val();
+    var num2=$("#txt2").val();
+
+    $.getJSON("/api/FindSum?firstnumber="+num1+"&secondnumber="+num2, function (data) {
+    $("#result").text("Sum is "+data);
+
+    })
+
+    })
+    })
+    </script>
+</head>
+<body>
+       <div>
+            <h4>Find Sum of Two Numbers Using Web Api in Asp.Net MVC</h4>
+            <table border="1">
+                <tr>
+                    <td>Enter First Number</td>
+                    <td><input type="text" name="num1" id="txt1" value="" /></td>
+
+                </tr>
+                <tr>
+                    <td>Enter Second Number</td>
+                    <td><input type="text" name="num2" id="txt2" value="" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="button" name="sum" id="button1" value="Calculate Sum" /></td>
+
+
+
+                </tr>
+            </table>
+            <hr />
+
+            <span id="result" />
+
+        </div>
+
+
+   
+</body>
+</html>

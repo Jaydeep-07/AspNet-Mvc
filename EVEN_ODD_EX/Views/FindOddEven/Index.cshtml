@@ -1,0 +1,39 @@
+﻿@{
+    Layout = null;
+}
+@model EVEN_ODD_EX.Models.EvenOdd
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        
+        <h4>Find Odd Even Number Using Asp.Net MVC</h4>
+        <form action="/FindOddEven/Index" method="post">
+            <table border="1">
+                <tr>
+                    <td>Enter Your Number</td>
+                    <td>
+                        <input type="text" name="a" />
+
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="Find Odd Even" />
+
+                    </td>
+                </tr>
+
+            </table>
+            @Model.msg
+
+        </form>
+
+    </div>
+</body>
+</html>

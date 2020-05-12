@@ -1,0 +1,44 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/jquery/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#button1").click(function () {
+
+
+                $.getJSON("/api/SearchData", function (data) {
+
+
+                    var xmlDoc = $.parseXML(data);
+
+
+                    $("#ShowTable").empty();
+
+                    $("#ShowTable").append("<table border=1 ><thead><tr><th>Roll No</th><th>Student Name</th><th>Father Name</th><th>Mother Name</th></tr></thead><tbody></tbody></table>");
+                    $(xmlDoc).find('Table').each(function () {
+                        $("#ShowTable table tbody").append("<tr><td>" + $(this).find('rollno').text() + "</td><td>" + $(this).find('sname').text() + "</td><td>" + $(this).find('fathername').text() + "</td><td>" + $(this).find('mothername').text() + "</td></tr>");
+
+                    })
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <h4><font color="red">How to Show All Data From Table Using Web API and Asp.net MVC</font></h4>
+        <input type="button" name="showdata" id="button1" value="Click to Show All Data" /><hr />
+    </div>
+    <div id="ShowTable"></div>
+</body>
+</html>
+
+

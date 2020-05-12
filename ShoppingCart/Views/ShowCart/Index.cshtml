@@ -1,0 +1,46 @@
+﻿@using System.Data
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>Hariti Study Hub</h1>
+    <h3>Implement Shopping Cart in Website Using Asp.Net MVC</h3>
+
+    No of Products in Cart @ViewBag.cartnumber  @Html.ActionLink("Continue Shopping", "Index", "Home")
+    <br />
+    <br />
+    <br />
+    <table border="1">
+        <tr>
+            <th>S.No</th>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Product Image</th>
+
+
+        </tr>
+        @foreach (DataRow row in Model.Rows)
+        {
+            <tr>
+                <td>@row["sno"]</td>
+                <td>@row["productid"]</td>
+                <td>@row["productname"]</td>
+                <td>@row["price"]</td>
+                <td><img src="~/@Url.Content(row["productimage"].ToString())" alt="" width="150" height="150" /></td>
+
+
+            </tr>
+        }
+    </table>
+
+</body>
+</html>

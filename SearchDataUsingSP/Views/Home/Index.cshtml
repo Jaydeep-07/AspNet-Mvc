@@ -1,0 +1,43 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h4>Search Data From SQL Server Database Using Asp.Net MVC C#</h4>
+    <div>
+        <form action="/Home/Index" method="post">
+            <table border="1" width="500" height="300" bgcolor="lightgreen">
+                <tr>
+                    <td>Roll No</td>
+                    <td><input type="text" name="rollno" value="@Model.rollno" /><input type="submit" name="search" value="Search" /><br /><font color="RED">@ViewBag.searchresult</font></td>
+
+
+                </tr>
+                <tr>
+                    <td>Student Name</td>
+                    <td><input type="text" name="sname" value="@Model.sname" /></td>
+                </tr>
+                <tr>
+                    <td>Father Name</td>
+                    <td><input type="text" name="fname" value="@Model.fname" /></td>
+                </tr>
+                <tr>
+                    <td>Mother Name</td>
+                    <td><input type="text" name="mname" value="@Model.mname" /></td>
+                </tr>
+
+            </table>
+
+        </form>
+    </div>
+
+</body>
+</html>

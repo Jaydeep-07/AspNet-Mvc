@@ -1,0 +1,39 @@
+﻿@using System.Data;
+@model DataSet
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>Hariti Study Hub</h1>
+    <h4><font color="red">Pass DataSet From Controller to View in Asp.Net MVC</font></h4>
+    <div>
+        <table border="1" bgcolor="yellow">
+            <tr>
+                <th>Roll Number</th>
+                <th>Student Name</th>
+                <th>Father Name</th>
+                <th>Mother Name</th>
+            </tr>
+            @foreach (DataRow row in Model.Tables[0].Rows)
+            {
+                <tr>
+                    <td>@row["rollno"]</td>
+                    <td>@row["sname"]</td>
+                    <td>@row["fathername"]</td>
+                    <td>@row["mothername"]</td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>
+
+
